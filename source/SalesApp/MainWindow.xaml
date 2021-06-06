@@ -10,20 +10,20 @@
 				Width="1200"
 				WindowState='Maximized'
 				FontSize='18'>
-	<Grid>
+	<Grid Background="LightBlue">
 		<Grid.RowDefinitions>
 			<RowDefinition Height='60' />
 			<RowDefinition Height='185*' />
 		</Grid.RowDefinitions>
 		<TextBlock FontSize='40'
-							 Text='Sales Application'></TextBlock>
-		<TabControl Grid.Row='1'>
+							 Text='Brokerage Sales Application' HorizontalAlignment="Center"></TextBlock>
+		<TabControl Grid.Row='1' Margin="20,10">
 			<TabItem Header='Invoices'>
 
 				<Grid>
 					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width='102.773' />
-						<ColumnDefinition Width='219.427' />
+						<ColumnDefinition Width='Auto' />
+						<ColumnDefinition Width='Auto' />
 						<ColumnDefinition Width='20' />
 						<ColumnDefinition Width='Auto' />
 					</Grid.ColumnDefinitions>
