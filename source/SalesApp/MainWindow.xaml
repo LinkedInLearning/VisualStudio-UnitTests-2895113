@@ -96,6 +96,7 @@
 					</StackPanel>
 				</Grid>
 			</TabItem>
+			<TabItem Header="Loans" />
 		</TabControl>
 	</Grid>
 </Window>
