@@ -28,7 +28,7 @@ namespace BrokerageLib
 			return (decimal)Math.Pow((double)calculatedReturn, (.5)) - 1;
 
 		}
-		public decimal CalculatePayment(decimal annualInterestRate, int durationInMonths, decimal loanAmount)
+		public decimal CalculateLoanPayment(decimal annualInterestRate, int durationInMonths, decimal loanAmount)
 		{
 
 			decimal monthlyRate = (decimal)annualInterestRate / 12;
