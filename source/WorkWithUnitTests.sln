@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AddxUnitProject", "AddxUnitProject", "{43CE4ACF-19D4-4F72-9FC5-FA43C5955EE5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AddTestClasses", "AddTestClasses", "{43CE4ACF-19D4-4F72-9FC5-FA43C5955EE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerageLib", "BrokerageLib\BrokerageLib.csproj", "{9B3FAAAA-85BD-4278-BCE5-0A2DD632C133}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesApp", "SalesApp\SalesApp.csproj", "{A4BE2202-08A3-4550-A029-44E676FF30E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerageLib.XUnit.Tests", "BrokerageLib.XUnit.Tests\BrokerageLib.XUnit.Tests.csproj", "{4C59F5BA-F9CF-4C18-A030-1177A62341B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrokerageLib.XUnit.Tests", "BrokerageLib.XUnit.Tests\BrokerageLib.XUnit.Tests.csproj", "{4C59F5BA-F9CF-4C18-A030-1177A62341B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
