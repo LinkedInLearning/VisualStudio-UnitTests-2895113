@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RunTest", "RunTest", "{43CE4ACF-19D4-4F72-9FC5-FA43C5955EE5}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RunTest-Done", "RunTest-Done", "{43CE4ACF-19D4-4F72-9FC5-FA43C5955EE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokerageLib", "BrokerageLib\BrokerageLib.csproj", "{9B3FAAAA-85BD-4278-BCE5-0A2DD632C133}"
 EndProject

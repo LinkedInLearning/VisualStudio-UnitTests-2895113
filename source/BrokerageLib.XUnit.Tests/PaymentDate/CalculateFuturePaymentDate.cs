@@ -23,5 +23,11 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 			// assert
 			Assert.Equal(expected: sampleDate.AddDays(30), actual: resultWhichShouldBe30DaysLater);
 		}
-	}
+		[Fact]
+		public void ReturnMonday_WhenProposedDateFallsOnSunday() {
+			Assert.True(false);
+		}
+		[Fact]
+		public void ReturnMonday_WhenProposedDateFallsOnSaturday() { }
+		}
 }
