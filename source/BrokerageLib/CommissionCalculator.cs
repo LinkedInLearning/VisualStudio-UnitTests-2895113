@@ -16,7 +16,7 @@ namespace BrokerageLib {
 		// or when units sold is greater than Constants.CommissionThreshold.EarnerUnitAmount (400)
 
 
-		public decimal GetCommissionForTheTransaction(int unitsSold, decimal unitPrice)
+		public decimal GetCommissionForTheSale(int unitsSold, decimal unitPrice)
 		{
 			if (unitsSold < 0)
 			{

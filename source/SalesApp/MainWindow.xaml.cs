@@ -70,7 +70,7 @@ namespace SalesApp
 			var calculator = new CommissionCalculator();
 
 			// Act
-			decimal calculatedCommission = calculator.GetCommissionForTheTransaction(unitsSold, unitPrice);
+			decimal calculatedCommission = calculator.GetCommissionForTheSale(unitsSold, unitPrice);
 			if (totalSale==0)
 			{
 				return;

@@ -44,6 +44,7 @@
     <Compile Include="Account.cs" />
     <Compile Include="CommissionConstants.cs" />
     <Compile Include="CommissionCalculator.cs" />
+    <Compile Include="Financial.cs" />
     <Compile Include="PaymentDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
