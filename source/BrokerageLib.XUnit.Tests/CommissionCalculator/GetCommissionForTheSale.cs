@@ -71,7 +71,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 			// Act and Assert
 			var argException = Assert.Throws<ArgumentOutOfRangeException>(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
-			Record.Exception(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
+			//Record.Exception(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 		}
 		[Fact]
 		public void ThrowArgumentOutOfRangeException_WhenNegativePrice() {

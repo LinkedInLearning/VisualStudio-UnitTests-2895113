@@ -7,6 +7,27 @@ using Xunit;
 using SUT = BrokerageLib;
 
 namespace BrokerageLib.XUnit.Tests.Account {
-	class Credit {
+	public class Credit_Should {
+		[Fact]
+		public void UpdateBalanceCorrectly_DuringCreditAction() {
+			// arrange
+			decimal beginningBalance = 5.06M;
+			decimal depositAmount = 3.01M;
+			decimal expected = 8.07M;
+			SUT.Account account = new SUT.Account("Test Customer", beginningBalance);
+
+			// act
+			account.Credit(depositAmount);	
+
+		
+
+			// assert
+			decimal actual = account.Balance;
+			Assert.Equal(expected, actual);
+
+	
+
+		}
+
 	}
 }
