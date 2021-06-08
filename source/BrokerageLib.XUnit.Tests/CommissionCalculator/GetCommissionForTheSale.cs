@@ -94,9 +94,9 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			var calculator = new SUT.CommissionCalculator();
 
 			// Act
-			// Record.Exeption does not assert anything
-			// It gathers the exception if thrown.
-			// Returns null if no exe
+			// Record.Exception does not assert anything
+			// It gathers any exception, if thrown.
+			// Returns null if no exceptions
 			var argException = Record.Exception(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 
 			// Assert
