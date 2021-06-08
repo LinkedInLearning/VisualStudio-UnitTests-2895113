@@ -1,0 +1,28 @@
+﻿A concept I've seen for test organization with folders
+
+Use .NET namespaces to help, one namespace for each class
+
+BrokerageLib.Tests <== the main namespace
+BrokerageLib.Tests.Account
+BrokerageLib.Tests.CommissionCalculator
+BrokerageLib.Test.Financial
+BrokerageLib.Test.PaymentDate
+
+Create a folder in the test project for each classname, 
+and Visual Studio will automatically use for namespace name.
+
+
+In the folder, create one class for each method in the class
+
+Account
+  Debit
+  Credit
+CommissionCalculator
+  GetCommissionForTheSale
+Financial
+  GetRateOfReturn
+  GetAnnualizedRateOfReturn
+  CalculateLoanPayment
+PaymentDate
+  CalculateFuturePaymentDate
+
