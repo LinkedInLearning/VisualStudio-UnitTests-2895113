@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit;
+using SUT = BrokerageLib;
 
 namespace BrokerageLib.XUnit.Tests.Account {
 	class Credit {
