@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Linq;
 using Xunit;
 using SUT = BrokerageLib;
 
 namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
-  public class CalculateFuturePaymentDate_Should {
+	public class CalculateFuturePaymentDate_Should {
     [Fact]
     public void ReturnDate30DaysInFuture_WhenProposedDateFallsOnWeekday() {
       // arrange

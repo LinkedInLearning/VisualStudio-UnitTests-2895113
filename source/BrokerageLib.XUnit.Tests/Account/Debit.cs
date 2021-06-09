@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 using SUT = BrokerageLib;
 
@@ -25,20 +21,6 @@ namespace BrokerageLib.XUnit.Tests.Account {
 			decimal balance = account.Balance;
 			Assert.Equal(expected: expectedBalance, actual: balance);
 		}
-		//[Fact]
-		////[ExpectedException(typeof(ArgumentOutOfRangeException))]
-		//public void ThrowExceptionWhenOverdrawn_DuringDebitAction() {
-		//	// arrange
-		//	decimal beginningBalance = 12.05M;
-		//	decimal debitAmount = 12.06M;
-
-		//	SUT.Account account = new SUT.Account(CUSTOMER_NAME, beginningBalance);
-
-		//	// act
-		//// 	account.Debit(debitAmount);
-		//		var argException = Assert.Throws<ArgumentOutOfRangeException>(() =>
-		//			account.Debit(debitAmount));
-		//	}
 
 		[Fact]
 		public void FreezeAccount_WhenNegativeBalanceBelowThreshold() {

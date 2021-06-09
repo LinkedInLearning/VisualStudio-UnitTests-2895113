@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 using SUT = BrokerageLib;
 
-namespace BrokerageLib.XUnit.Tests.Account
-{
+namespace BrokerageLib.XUnit.Tests.Account {
 	public class Constructor_Should
 	{
 		[Fact]

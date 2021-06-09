@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
 using Xunit;
 using SUT = BrokerageLib;
 
-namespace BrokerageLib.XUnit.Tests.CommissionCalculator
-{
+namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 	public class GetCommissionForTheSale_Should
 	{
 		// Theories are tests which are only true for a particular set of data.
