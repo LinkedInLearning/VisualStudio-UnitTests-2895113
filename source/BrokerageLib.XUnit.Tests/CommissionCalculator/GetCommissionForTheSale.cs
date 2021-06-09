@@ -1,17 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xunit;
 using SUT = BrokerageLib;
 
 namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
-	public class GetCommissionForTheSale_Should
-	{
+	public class GetCommissionForTheSale_Should {
+		public static
+			IEnumerable<object[]> StandardTestData =>
+
+				new List<object[]>
+				{
+
+					// write code to generate the input values
+						new object[] { 1, 1.00 }, // low units sold, low total sale
+            new object[] { 399, 1 }, // 1 below unit threshold (edge case)
+            new object[] { 1, 11_999 }, // 1 below sales threshold (edge case)
+           
+        };
 		// Theories are tests which are only true for a particular set of data.
 		[Theory]
-		[InlineData(1, 1.00)] // low units sold, low total sale
-		[InlineData(399, 1)] // 1 below unit threshold (edge case)
-		[InlineData(1, 11_999)] // 1 below sales threshold (edge case)
-		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(int unitsSold, decimal unitPrice)
-		{
+		[InlineData(1, 1.00)]
+		[InlineData(399, 1)]
+		[InlineData(1, 11_999)]
+		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
 
@@ -29,8 +40,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 		[InlineData(600, 1.00)]
 		[InlineData(1, 15_000.00)]
 		//[InlineData(1, 150.00)] //failing test
-		public void ReturnEpicCommission_WhenAmountsOverEpicThreshold(int unitsSold, decimal unitPrice)
-		{
+		public void ReturnEpicCommission_WhenAmountsOverEpicThreshold(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
 
@@ -49,8 +59,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 		[InlineData(400, 1)]
 		[InlineData(1, 12_000)]
 		// [InlineData(601, 1)] // failing test
-		public void ReturnEarnerCommission_WhenAmountsOverEarnerThreshold(int unitsSold, decimal unitPrice)
-		{
+		public void ReturnEarnerCommission_WhenAmountsOverEarnerThreshold(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
 
@@ -65,8 +74,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 
 		[Fact]
-		public void ThrowArgumentOutOfRangeException_WhenNegativeUnitsSold()
-		{
+		public void ThrowArgumentOutOfRangeException_WhenNegativeUnitsSold() {
 			// Arrange
 			var unitsSold = -1;
 			var unitPrice = 120.00M;
@@ -82,8 +90,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 		}
 		[Fact]
-		public void ThrowArgumentOutOfRangeException_WhenNegativePrice()
-		{
+		public void ThrowArgumentOutOfRangeException_WhenNegativePrice() {
 			// Arrange
 
 			var unitsSold = 10;
@@ -94,7 +101,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 			// Record.Exception does not assert anything
 			// It gathers any exception, if thrown.
 			// Returns null if no exceptions
-			var argException = Record.Exception( () => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
+			var argException = Record.Exception(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 
 			// Assert
 			// Now we can assert whatever we need to with the captured information
