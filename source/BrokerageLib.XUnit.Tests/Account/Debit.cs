@@ -12,7 +12,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		public const String CUSTOMER_NAME = "Mr. Heltman Azon";
 		[Fact]
 		public void UpdateBalanceCorrectly_DuringDebitAction() {
-		// arrange
+		// arrange	
 		decimal beginningBalance = 12.05M;
 		decimal debitAmount = 2.02M;
 		decimal expected = 10.03M;
