@@ -23,7 +23,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			// Assert
 			decimal expectedCommission = (unitsSold * unitPrice) *
 																	 SUT.Constants.CommissionRate.Standard;
-			Assert.Equal(expectedCommission, calculatedCommission);
+			Assert.Equal(expected: expectedCommission, actual: calculatedCommission);
 		}
 
 
@@ -42,7 +42,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			// Assert
 			decimal expectedCommission = (unitsSold * unitPrice) *
 																	 SUT.Constants.CommissionRate.Epic;
-			Assert.Equal(expectedCommission, calculatedCommission);
+			Assert.Equal(expected: expectedCommission, actual: calculatedCommission);
 		}
 
 
@@ -62,7 +62,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			// Assert
 			decimal expectedCommission = (unitsSold * unitPrice) *
 																	 SUT.Constants.CommissionRate.Earner;
-			Assert.Equal(expectedCommission, calculatedCommission);
+			Assert.Equal(expected: expectedCommission, actual: calculatedCommission:);
 		}
 
 
@@ -97,7 +97,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			// Record.Exception does not assert anything
 			// It gathers any exception, if thrown.
 			// Returns null if no exceptions
-			var argException = Record.Exception(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
+			var argException = Record.Exception( () => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 
 			// Assert
 			// Now we can assert whatever we need to with the captured information

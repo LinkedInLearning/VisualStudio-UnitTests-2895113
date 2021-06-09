@@ -13,7 +13,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 			// arrange
 			decimal beginningBalance = 5.06M;
 			decimal depositAmount = 3.01M;
-			decimal expected = 8.07M;
+			decimal expectedBalance = 8.07M;
 			SUT.Account account = new SUT.Account("Test Customer", beginningBalance);
 
 			// act
@@ -22,8 +22,8 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		
 
 			// assert
-			decimal actual = account.Balance;
-			Assert.Equal(expected, actual);
+			decimal balance = account.Balance;
+			Assert.Equal(expected: expectedBalance, actual: balance);
 
 	
 

@@ -19,7 +19,9 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 			var calculatedRate = fin.GetAnnualizedRateOfReturn(initialCost, soldAmount, dividendsEarned, yearsHeld);
 			// floating point comparisons are tricky, use the precision parameter to test 
 			// precise number of decimal places.
-			Assert.Equal(expected: expectedRate, actual: calculatedRate, precision: 6);
+			Assert.Equal(expected: expectedRate, 
+										actual: calculatedRate, 
+										precision: 6);
 		}
 	}
 

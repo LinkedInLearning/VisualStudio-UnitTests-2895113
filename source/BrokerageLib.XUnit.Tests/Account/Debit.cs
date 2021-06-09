@@ -15,15 +15,15 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		// arrange	
 		decimal beginningBalance = 12.05M;
 		decimal debitAmount = 2.02M;
-		decimal expected = 10.03M;
+		decimal expectedBalance = 10.03M;
 		SUT.Account account = new SUT.Account(CUSTOMER_NAME, beginningBalance);
 
 		// act
 		account.Debit(debitAmount);
 
 		// assert
-		decimal actual = account.Balance;
-		Assert.Equal(expected, actual);
+		decimal balance = account.Balance;
+		Assert.Equal(expected: expectedBalance, actual: balance);
 	}
 	[Fact]
 	//[ExpectedException(typeof(ArgumentOutOfRangeException))]

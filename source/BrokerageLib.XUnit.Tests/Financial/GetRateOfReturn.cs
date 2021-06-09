@@ -17,7 +17,7 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 			// act
 			var calculatedRate = fin.GetRateOfReturn(initialCost, soldAmount, dividendsEarned);
 
-			Assert.Equal(expectedRate, calculatedRate);
+			Assert.Equal(expected: expectedRate, actual: calculatedRate);
 		}
 	}
 

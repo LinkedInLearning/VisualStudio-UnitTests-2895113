@@ -18,7 +18,8 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
       // assert
 
-      Xunit.Assert.Equal(sampleDate.AddDays(30), resultWhichShouldBe30DaysLater);
+      Xunit.Assert.Equal(expected: sampleDate.AddDays(30), 
+                         actual: resultWhichShouldBe30DaysLater);
     }
     [Fact]
     public void ReturnMonday_WhenProposedDateFallsOnSunday() {
@@ -32,7 +33,8 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
       // assert
 
-      Assert.Equal(DayOfWeek.Monday, resultDateWhichShouldBeMonday.DayOfWeek);
+      Assert.Equal(expected: DayOfWeek.Monday, 
+                    actual: resultDateWhichShouldBeMonday.DayOfWeek);
     }
 
     [Fact]
@@ -47,7 +49,8 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
       // assert
 
-      Assert.Equal(DayOfWeek.Monday, resultDateWhichShouldBeMonday.DayOfWeek);
+      Assert.Equal(expected: DayOfWeek.Monday, 
+                    actual: resultDateWhichShouldBeMonday.DayOfWeek);
     }
   }
 }

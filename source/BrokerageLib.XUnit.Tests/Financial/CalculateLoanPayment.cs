@@ -19,7 +19,9 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 			var calculatedMonthlyPayment = fin.CalculateLoanPayment(annualInterestRate, durationInMonths, loanAmount);
 			// floating point comparisons are tricky, use the precision parameter to test 
 			// precise number of decimal places.
-			Assert.Equal(expected: expectedMonthlyPayment, actual: calculatedMonthlyPayment, precision: 2);
+			Assert.Equal(expected: expectedMonthlyPayment, 
+									actual: calculatedMonthlyPayment, 
+									precision: 2);
 		}
 	}
 }
