@@ -7,8 +7,8 @@ namespace BrokerageLib {
     private decimal _balance;
     private bool _frozen = false;
 
-   
-
+  
+  
     public Account(string customerName, decimal balance) {
       _customerName = customerName;
       _balance = balance;
@@ -22,12 +22,21 @@ namespace BrokerageLib {
       get { return _balance; }
     }
 
-    public void Debit(decimal amount) {
-      
+    public bool AccountFrozen
+    {
+      get { return _frozen; }
+    }
 
+    public void Debit(decimal amount) {
       if (amount > _balance)
       {
-        throw new ArgumentOutOfRangeException("amount");
+				// we allow negative balances under some conditions
+        // we charge a service fee to customer
+				// if balance is below threshold freeze the account.
+				if (_balance < Constants.AccountThresholds.FreezeBalance)
+				{
+          FreezeAccount();
+				}
       }
 
       if (amount < 0)
@@ -47,6 +56,10 @@ namespace BrokerageLib {
       }
 
       _balance += amount;
+      if (_balance > 0)
+      {
+        UnfreezeAccount();
+      }
     }
 
     private void FreezeAccount() {

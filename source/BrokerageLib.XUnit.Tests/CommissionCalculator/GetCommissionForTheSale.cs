@@ -62,9 +62,8 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator
 			// Assert
 			decimal expectedCommission = (unitsSold * unitPrice) *
 																	 SUT.Constants.CommissionRate.Earner;
-			Assert.Equal(expected: expectedCommission, actual: calculatedCommission:);
+			Assert.Equal(expected: expectedCommission, actual: calculatedCommission);
 		}
-
 
 
 		[Fact]
