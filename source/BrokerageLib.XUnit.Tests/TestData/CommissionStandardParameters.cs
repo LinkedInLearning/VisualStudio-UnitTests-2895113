@@ -11,21 +11,21 @@ namespace BrokerageLib.XUnit.Tests.TestData {
 		{
 			new object []
 			{
-				new CommisionTestModel
+				new CommissionTestModel
 				{
 					UnitsSold = 1,
 					UnitPrice = 1M
 				}},
 			new object []
 			{
-				new CommisionTestModel
+				new CommissionTestModel
 				{
 					UnitsSold = 399,
 					UnitPrice = 1M
 				}},
 			new object []
 			{
-				new CommisionTestModel
+				new CommissionTestModel
 				{
 					UnitsSold = 1,
 					UnitPrice = 11_999M
@@ -41,7 +41,7 @@ namespace BrokerageLib.XUnit.Tests.TestData {
 		IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
 	}
-	public struct CommisionTestModel {
+	public struct CommissionTestModel {
 		public int UnitsSold { get; set; }
 		public decimal UnitPrice { get; set; }
 

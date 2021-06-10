@@ -12,7 +12,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 		[Theory]
 		[ClassData (typeof(TestData.CommissionStandardParameters))]
-		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(TestData.CommisionTestModel model) {
+		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(TestData.CommissionTestModel model) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
 
