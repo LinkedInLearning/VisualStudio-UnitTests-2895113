@@ -5,32 +5,22 @@ using SUT = BrokerageLib;
 
 namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 	public class GetCommissionForTheSale_Should {
-		public static
-			IEnumerable<object[]> StandardTestData =>
 
-				new List<object[]>
-				{
-
-					// write code to generate the input values
-						new object[] { 1, 1.00 }, // low units sold, low total sale
-            new object[] { 399, 1 }, // 1 below unit threshold (edge case)
-            new object[] { 1, 11_999 }, // 1 below sales threshold (edge case)
-           
-        };
 		// Theories are tests which are only true for a particular set of data.
+		// old method signature
+		// public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(int unitsSold, decimal unitPrice)
+
 		[Theory]
-		[InlineData(1, 1.00)]
-		[InlineData(399, 1)]
-		[InlineData(1, 11_999)]
-		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(int unitsSold, decimal unitPrice) {
+		[ClassData (typeof(TestData.CommissionStandardParameters))]
+		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(TestData.CommisionTestModel model) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
 
 			// Act
-			decimal calculatedCommission = calculator.GetCommissionForTheSale(unitsSold, unitPrice);
+			decimal calculatedCommission = calculator.GetCommissionForTheSale(model.UnitsSold, model.UnitPrice);
 
 			// Assert
-			decimal expectedCommission = (unitsSold * unitPrice) *
+			decimal expectedCommission = (model.UnitsSold * model.UnitPrice) *
 																	 SUT.Constants.CommissionRate.Standard;
 			Assert.Equal(expected: expectedCommission, actual: calculatedCommission);
 		}
