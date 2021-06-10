@@ -14,14 +14,15 @@ namespace BrokerageLib.PaymentSystem {
 		/// </summary>
 		/// <param name="startingDate">the date to use as starting date.</param>
 		/// <returns>The future payment date</returns>
+		/// 
 		public DateTime CalculateFuturePaymentDate(DateTime startingDate) {
 			var tempDate = startingDate.AddDays(30);
 
-
+		
 			switch (tempDate.DayOfWeek)
 			{
 				case DayOfWeek.Saturday:
-					tempDate = tempDate.AddDays(2);
+					tempDate = tempDate.AddDays(1); // Failing test, this should be AddDays(2)
 					break;
 				case DayOfWeek.Sunday:
 					tempDate = tempDate.AddDays(1); // Error in our code here!
