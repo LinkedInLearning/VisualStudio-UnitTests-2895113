@@ -19,9 +19,10 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
         };
 		// Theories are tests which are only true for a particular set of data.
 		[Theory]
-		[InlineData(1, 1.00)]
-		[InlineData(399, 1)]
-		[InlineData(1, 11_999)]
+		[MemberData(nameof (StandardTestData))]
+		//[InlineData(1, 1.00)]
+		//[InlineData(399, 1)]
+		//[InlineData(1, 11_999)]
 		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
