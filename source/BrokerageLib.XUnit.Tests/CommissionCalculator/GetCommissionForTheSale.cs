@@ -76,8 +76,6 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 			// We assert that an ArgumentOutOfRangeException is thrown in the MUT
 			Assert.Throws<ArgumentOutOfRangeException>(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 
-			// optional, capture the exception (but use Record.Exception instead).
-			var argException = Assert.Throws<ArgumentOutOfRangeException>(() => calculator.GetCommissionForTheSale(unitsSold, unitPrice));
 
 
 		}
