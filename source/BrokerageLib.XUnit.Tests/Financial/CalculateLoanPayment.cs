@@ -5,7 +5,7 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 	public class CalculatePayment_Should {
 		[Theory]
 		[InlineData(0.07, 360, 120_000, 798.36)]
-
+		[Trait(name: "Category", value: "Theory-InlineData")]
 		public void ReturnCorrectAnnualRate_GivenNormalParameters(decimal annualInterestRate, int durationInMonths, decimal loanAmount, decimal expectedMonthlyPayment) {
 			// arrange
 			var fin = new SUT.Financial();

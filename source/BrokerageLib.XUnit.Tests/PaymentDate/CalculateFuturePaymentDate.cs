@@ -6,6 +6,8 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
 	public class CalculateFuturePaymentDate_Should {
     [Fact]
+    [Trait  (name: "Category", value: "Fact Test")]
+    [Trait(name: "Sprint", value: "12")]
     public void ReturnDate30DaysInFuture_WhenProposedDateFallsOnWeekday() {
       // arrange
       var pd = new SUT.PaymentSystem.PaymentDate();
@@ -21,6 +23,8 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
                          actual: resultWhichShouldBe30DaysLater);
     }
     [Fact]
+    [Trait(name: "Category", value: "Fact Test")]
+    [Trait(name: "Sprint", value: "12")]
     public void ReturnMonday_WhenProposedDateFallsOnSunday() {
       // arrange
       var pd = new SUT.PaymentSystem.PaymentDate();
@@ -37,6 +41,7 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
     }
 
     [Fact]
+    [Trait(name: "Category", value: "Fact Test")]
     public void ReturnMonday_WhenProposedDateFallsOnSaturday() {
       // arrange
       var pd = new SUT.PaymentSystem.PaymentDate();

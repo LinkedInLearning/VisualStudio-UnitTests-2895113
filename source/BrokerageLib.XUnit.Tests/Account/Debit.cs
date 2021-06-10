@@ -23,6 +23,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
+		[Trait(name: "Freeze", value: "Chilling...")]
 		public void FreezeAccount_WhenNegativeBalanceBelowThreshold() {
 			// arrange
 			decimal beginningBalance = 1M;
@@ -40,7 +41,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
-
+		[Trait(name: "Category", value: "Exceptions")]
 		public void ThrowException_WhenNegativeDebitAmount() {
 			// arrange
 			decimal beginningBalance = 12.05M;

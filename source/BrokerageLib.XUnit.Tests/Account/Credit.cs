@@ -24,7 +24,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
-		
+		[Trait(name: "Category", value: "Exceptions")]
 		public void ThrowException_WhenNegativeCreditAmount() {
 			// arrange
 			decimal beginningBalance = 12.05M;
@@ -40,6 +40,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
+		[Trait(name: "Freeze", value: "Thawing...")]
 		public void UnfreezeAccount_WhenPositiveBalanceReached() {
 			// arrange
 			decimal beginningBalance = 1;

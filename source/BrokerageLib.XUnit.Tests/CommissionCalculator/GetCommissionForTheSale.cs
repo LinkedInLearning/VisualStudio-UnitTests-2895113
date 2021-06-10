@@ -12,6 +12,8 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 		[Theory]
 		[ClassData (typeof(TestData.CommissionStandardParameters))]
+		[Trait(name: "Category", value: "Theory-ClassData")]
+		[Trait(name: "Sprint", value: "12")]
 		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds(TestData.CommissionTestModel model) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
@@ -29,7 +31,8 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 		[Theory]
 		[InlineData(600, 1.00)]
 		[InlineData(1, 15_000.00)]
-		//[InlineData(1, 150.00)] //failing test
+		
+		[Trait(name: "Category", value: "Theory-InlineData")]
 		public void ReturnEpicCommission_WhenAmountsOverEpicThreshold(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
@@ -48,7 +51,8 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 		[Theory]
 		[InlineData(400, 1)]
 		[InlineData(1, 12_000)]
-		// [InlineData(601, 1)] // failing test
+	
+		[Trait(name: "Category", value: "Theory-InlineData")]
 		public void ReturnEarnerCommission_WhenAmountsOverEarnerThreshold(int unitsSold, decimal unitPrice) {
 			// Arrange
 			var calculator = new SUT.CommissionCalculator();
@@ -64,6 +68,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 
 		[Fact]
+		[Trait(name: "Category", value: "Exceptions")]
 		public void ThrowArgumentOutOfRangeException_WhenNegativeUnitsSold() {
 			// Arrange
 			var unitsSold = -1;
@@ -80,6 +85,7 @@ namespace BrokerageLib.XUnit.Tests.CommissionCalculator {
 
 		}
 		[Fact]
+		[Trait(name: "Category", value: "Exceptions")]
 		public void ThrowArgumentOutOfRangeException_WhenNegativePrice() {
 			// Arrange
 
