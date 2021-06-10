@@ -21,7 +21,7 @@ namespace BrokerageLib.PaymentSystem {
 			switch (tempDate.DayOfWeek)
 			{
 				case DayOfWeek.Saturday:
-					tempDate = tempDate.AddDays(2);
+					tempDate = tempDate.AddDays(1); // failing test, should be 2
 					break;
 				case DayOfWeek.Sunday:
 					tempDate = tempDate.AddDays(1); // Error in our code here!

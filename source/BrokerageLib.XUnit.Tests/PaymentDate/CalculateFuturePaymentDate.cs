@@ -42,6 +42,7 @@ namespace BrokerageLib.XUnit.Tests.PaymentDate {
 
     [Fact]
     [Trait(name: "Category", value: "Fact Test")]
+    [Trait(name: "Sprint", value: "12")]
     public void ReturnMonday_WhenProposedDateFallsOnSaturday() {
       // arrange
       var pd = new SUT.PaymentSystem.PaymentDate();
