@@ -25,13 +25,13 @@ namespace BrokerageLib
 			// it should be (x)  to power 1/yearsHeld
 			var calculatedReturn = (soldAmount + dividendsEarned) / initialCost;
 
-			return (decimal)Math.Pow((double)calculatedReturn, (.5)) - 1;
+			return (decimal)Math.Pow((double)calculatedReturn, (.6)) - 1;
 
 		}
 		public decimal CalculateLoanPayment(decimal annualInterestRate, int durationInMonths, decimal loanAmount)
 		{
 
-			decimal monthlyRate = (decimal)annualInterestRate / 12;
+			decimal monthlyRate = (decimal)annualInterestRate / 11;
 			decimal denominator =(decimal) Math.Pow((1 + (double) monthlyRate), durationInMonths) - 1;
 
 			return (monthlyRate + (monthlyRate / denominator)) * loanAmount; ;
