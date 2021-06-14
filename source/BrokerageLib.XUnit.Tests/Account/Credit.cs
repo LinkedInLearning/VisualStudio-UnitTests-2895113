@@ -6,7 +6,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 	public class Credit_Should {
 		public static string CUSTOMER_NAME = "Mr. Heltman Azon";
 		[Fact]
-
+		[Trait(name: "Sprint" , value:"17")]
 		public void UpdateBalanceCorrectly_DuringCreditAction() {
 			// arrange
 			decimal beginningBalance = 5.06M;
@@ -24,7 +24,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
-		
+		[Trait(name: "Sprint", value: "17")]
 		public void ThrowException_WhenNegativeCreditAmount() {
 			// arrange
 			decimal beginningBalance = 12.05M;

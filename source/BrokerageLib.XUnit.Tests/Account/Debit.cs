@@ -23,6 +23,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[Fact]
+		[Trait(name: "Sprint", value: "17")]
 		public void FreezeAccount_WhenNegativeBalanceBelowThreshold() {
 			// arrange
 			decimal beginningBalance = 1M;
