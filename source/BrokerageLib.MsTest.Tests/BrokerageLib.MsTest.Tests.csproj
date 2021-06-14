@@ -49,11 +49,25 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Account\Constructor.cs" />
+    <Compile Include="Account\Credit.cs" />
+    <Compile Include="Account\Debit.cs" />
+    <Compile Include="CommissionCalculator\GetCommissionForTheSale.cs" />
+    <Compile Include="Financial\CalculateLoanPayment.cs" />
+    <Compile Include="Financial\GetAnnualizedRateOfReturn.cs" />
+    <Compile Include="Financial\GetRateOfReturn.cs" />
+    <Compile Include="PaymentDate\CalculateFuturePaymentDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BrokerageLib\BrokerageLib.csproj">
+      <Project>{9b3faaaa-85bd-4278-bce5-0a2dd632c133}</Project>
+      <Name>BrokerageLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

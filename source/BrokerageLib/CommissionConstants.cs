@@ -15,10 +15,12 @@
 			public const decimal EarnerUnitAmount = 400m;
 		}
 
-		public class Discount
-		{
+		public class Discount {
 			public const decimal PreferredCustomer = 0.2m;
 			public const decimal BulkOrder = 0.5m;
+		}
+		public class AccountThresholds {
+			public const decimal FreezeBalance = 900;
 		}
 	}
 }
