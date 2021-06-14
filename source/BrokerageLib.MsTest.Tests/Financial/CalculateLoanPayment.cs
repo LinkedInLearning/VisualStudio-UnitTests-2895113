@@ -10,6 +10,7 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 		//[InlineData(0.07, 360, 120_000, 798.36)]
 		[DataTestMethod]
 		[DataRow(0.07, 360, 120_000, 798.36)]
+		[TestCategory("Data Driven Test")]
 		public void ReturnCorrectAnnualRate_GivenNormalParameters(double annualInterestRate, int durationInMonths, double loanAmount, double expectedMonthlyPayment) {
 			// arrange
 			var fin = new SUT.Financial();

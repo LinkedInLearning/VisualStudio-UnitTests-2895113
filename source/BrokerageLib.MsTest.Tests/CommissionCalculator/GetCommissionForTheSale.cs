@@ -13,7 +13,7 @@ namespace BrokerageLib.MsTest.Tests.CommissionCalculator
 		// data parameters, see the financial tests for details
 		// on how to use [DataRow] and [DynamicData] attributes
 		[TestMethod]
-
+		[TestCategory("Sprint 16")]
 		public void ReturnStandardCommission_WhenAmountsAreBelowThresholds()
 		{
 			// Arrange
@@ -109,7 +109,7 @@ namespace BrokerageLib.MsTest.Tests.CommissionCalculator
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
-
+		[TestCategory("Exceptions")]
 		public void ThrowArgumentOutOfRangeException_WhenNegativeUnitsSold()
 		{
 			// Arrange
@@ -128,7 +128,7 @@ namespace BrokerageLib.MsTest.Tests.CommissionCalculator
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
-
+		[TestCategory("Exceptions")]
 		public void ThrowArgumentOutOfRangeException_WhenNegativePrice()
 		{
 			// Arrange

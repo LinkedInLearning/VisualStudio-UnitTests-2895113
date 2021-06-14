@@ -9,6 +9,7 @@ namespace BrokerageLib.XUnit.Tests.Financial {
 		//[InlineData(200.00, 250.00, 20.0, 0.35)]
 		[DataTestMethod]
 		[DynamicData(nameof(GetRateOfReturnTestParameters), DynamicDataSourceType.Method)]
+		[TestCategory("Data Driven Test")]
 		public void ReturnCorrectRate_GivenNormalParameters(decimal initialCost, decimal soldAmount, decimal dividendsEarned, decimal expectedRate) {
 			// arrange
 			var fin = new SUT.Financial();

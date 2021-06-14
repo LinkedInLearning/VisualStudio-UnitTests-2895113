@@ -24,6 +24,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[TestMethod]
+		[TestCategory("Freeze (Chilling...)")]
 		public void FreezeAccount_WhenNegativeBalanceBelowThreshold() {
 			// arrange
 			decimal beginningBalance = 1M;
@@ -42,6 +43,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 
 		[TestMethod]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
+		[TestCategory("Exceptions")]
 		public void ThrowException_WhenNegativeDebitAmount() {
 			// arrange
 			decimal beginningBalance = 12.05M;

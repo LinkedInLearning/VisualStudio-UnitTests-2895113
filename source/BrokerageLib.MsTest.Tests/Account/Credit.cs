@@ -25,6 +25,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[TestMethod]
+		[TestCategory("Exceptions")]
 		[ExpectedException(typeof(ArgumentOutOfRangeException))]
 		public void ThrowException_WhenNegativeCreditAmount() {
 			// arrange
@@ -40,6 +41,7 @@ namespace BrokerageLib.XUnit.Tests.Account {
 		}
 
 		[TestMethod]
+		[TestCategory("Freeze (Thawing...)")]
 		public void UnfreezeAccount_WhenPositiveBalanceReached() {
 			// arrange
 			decimal beginningBalance = 1;
