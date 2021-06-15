@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SUT = BrokerageLib;
 
-namespace BrokerageLib.XUnit.Tests.Account {
+namespace BrokerageLib.MsTest.Tests.Account {
 	[TestClass]
 	public class Constructor_Should
 	{

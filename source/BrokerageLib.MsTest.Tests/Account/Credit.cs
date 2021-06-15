@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SUT = BrokerageLib;
 
-namespace BrokerageLib.XUnit.Tests.Account {
+namespace BrokerageLib.MsTest.Tests.Account {
 	[TestClass]
 	public class Credit_Should {
 		public static string CUSTOMER_NAME = "Mr. Heltman Azon";

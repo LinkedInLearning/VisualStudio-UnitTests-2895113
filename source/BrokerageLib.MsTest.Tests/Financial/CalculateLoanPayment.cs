@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using SUT = BrokerageLib;
 
-namespace BrokerageLib.XUnit.Tests.Financial {
+namespace BrokerageLib.MsTest.Tests.Financial {
 	[TestClass]
 	public class CalculatePayment_Should {
 		//[Theory]
