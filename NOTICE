@@ -4,9 +4,36 @@ All Rights Reserved.
 Licensed under the LinkedIn Learning Exercise File License (the "License").
 See LICENSE in the project root for license information.
 
+xUnit
+https://github.com/xunit/xunit
+Copyright (c) .NET Foundation and Contributors
+License: Apache License 2.0
+http://www.apache.org/licenses/LICENSE-2.0
+
 Please note, this project may automatically load third party code from external 
 repositories (for example, NPM modules, Composer packages, or other dependencies). 
 If so, such third party code may be subject to other license terms than as set 
 forth above. In addition, such third party code may also depend on and load 
 multiple tiers of dependencies. Please review the applicable licenses of the 
 additional dependencies.
+
+
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+Unless otherwise noted, the source code here is covered by the following license:
+
+    Copyright (c) .NET Foundation and Contributors
+    All Rights Reserved
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
