@@ -1,7 +1,6 @@
 # Visual Studio Deep Dive: Unit Tests
 This is the repository for the LinkedIn Learning course Visual Studio Deep Dive: Unit Tests. The full course is available from [LinkedIn Learning][lil-course-url].
 
-![Visual Studio Deep Dive: Unit Tests][lil-thumbnail-url] 
 
 If you are a responsible programmer, you regularly test your code to make sure it behaves the way you expect it to behave. Unit tests are the most common type of developer test, and most programmers rely on a unit test framework to create and run those tests. In this course, Walt Ritscher takes a deep dive into the unit test tools available in Visual Studio. Walt gives an overview of unit tests and how they integrate with Visual Studio, then takes a deeper look into unit tests with MSTest and xUnit framework and how each is fully integrated into the Visual Studio Test Explorer, He also reviews additional Visual Studio test features like CodeLens, Live Unit Testing, and code coverage.
 
